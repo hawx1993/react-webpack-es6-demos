@@ -1,0 +1,8 @@
+.h1 {
+    color:blue;
+    border-bottom: 1px dashed #ccc;
+}
+
+:global(.h2) {
+    color: green;
+}
