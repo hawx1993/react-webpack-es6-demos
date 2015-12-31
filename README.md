@@ -4,4 +4,8 @@
 
 $ npm install 
 $ webpack entry.jsx bundle.js
+$ webpack-dev-server
+
 ```
+
+open http://localhost:8080/webpack-dev-server/index.html
