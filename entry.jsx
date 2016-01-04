@@ -20,11 +20,15 @@ var Input = React.createClass({
         return(
             <div>
                 <input type="text" value={value} onChange={this.handleChange}/>
-                <p>{value}</p>
+                <p>{a}</p>
             </div>
         )
     }
 });
+var a = React.createElement('a',{
+    className: 'link',
+    href: 'https://www.baidu.com'
+},'React');//<a class='link' href='https://www.baidu.com'>React</a>
 ReactDOM.render(
     <Input/>,
     document.getElementById('example')
