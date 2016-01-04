@@ -1,8 +1,10 @@
-.h1 {
-    color:blue;
-    border-bottom: 1px dashed #ccc;
+html{
+    font-size: 10px;
 }
-
-:global(.h2) {
-    color: green;
+p{
+    font-size: 1.6rem;
+}
+input[type=text]{
+    color: red;
+    font-size: 1.2rem;
 }

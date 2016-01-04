@@ -4,10 +4,28 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 var style = require('./app.css');
+var Input = React.createClass({
+    getInitialState: function () {
+        return{
+            value: 'hello'
+        }
+    },
+    handleChange: function(event){
+        this.setState({
+            value: event.target.value
+        })
+    },
+    render: function(){
+        var value = this.state.value;
+        return(
+            <div>
+                <input type="text" value={value} onChange={this.handleChange}/>
+                <p>{value}</p>
+            </div>
+        )
+    }
+});
 ReactDOM.render(
-    <div>
-        <h1 className={style.h1}>Hello World</h1>
-        <h2 className="h2">Hello Webpack</h2>
-    </div>,
+    <Input/>,
     document.getElementById('example')
 );
