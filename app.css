@@ -1,8 +1,8 @@
-body{
+body {
   background-color: #e0e8e0;
   opacity: .6;
 }
-input[type=text]{
+input[type=text] {
   position: absolute;
   left: 50%;
   top: 10%;
@@ -14,7 +14,7 @@ input[type=text]{
   margin-left: -150px;
   margin-top: -20px;
 }
-p{
+p {
   position: absolute;
   width: 400px;
   color: rosybrown;
