@@ -2,7 +2,7 @@
   "name": "reactdemo",
   "version": "1.0.0",
   "description": "reactdemos",
-  "main": "main.js",
+  "main": "./src/index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

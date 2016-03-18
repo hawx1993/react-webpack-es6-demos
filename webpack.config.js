@@ -2,25 +2,29 @@
  * Created by trigkit4 on 15/12/31.
  */
 var webpack = require('webpack');
+var path = require('path');
+
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-module.exports = {
-    entry: './entry.jsx',
+var config = {
+    entry: path.resolve(__dirname,'./src/entry'),
     output: {
+        path: path.resolve(__dirname,'./static'),
         filename: 'bundle.js'
+    },
+    resolve: {
+        extensions: ['', '.js', '.jsx']
     },
     module:{
         loaders:[
             {
-            test:/\.js[x]?$/,
-            loader: 'babel-loader',
-            exclude:/node_modules/,
-            query:{
-                presets: ['es2015','react']
-            }
-        },
+                test:/\.js[x]?$/,
+                loader: 'babel-loader',
+                exclude:/node_modules/,
+                query:{presets: ['es2015','react']}
+            },
             {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader?modules'
+                loader: 'style-loader!css-loader!less-loader?modules'
             }
         ]
     },
@@ -31,5 +35,6 @@ module.exports = {
             }
         })
     ]
-
 };
+
+module.exports = config;

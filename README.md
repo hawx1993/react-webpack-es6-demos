@@ -3,7 +3,7 @@
 ```js
 
 $ npm install 
-$ webpack entry.jsx bundle.js
+$ webpack 
 $ webpack-dev-server
 
 ```
