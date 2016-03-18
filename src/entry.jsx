@@ -5,7 +5,7 @@
 import HelloForm from './Hello';
 //var React = require('react');
 import React from 'react';
-var style = require('../app.css');
+require('../app.less');
 var $ = function (id) {
     return document.getElementById(id);
 };
