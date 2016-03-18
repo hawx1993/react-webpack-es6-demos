@@ -3,9 +3,9 @@
 ```js
 
 $ npm install 
-$ webpack 
-$ webpack-dev-server
+$ webpack --watch
+
 
 ```
 
-open http://localhost:8080/webpack-dev-server/index.html
+open http://localhost:8080
