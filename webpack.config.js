@@ -3,16 +3,18 @@
  */
 var webpack = require('webpack');
 var path = require('path');
-
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var uglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
+
 var config = {
     entry: path.resolve(__dirname,'./src/entry'),
     output: {
         path: path.resolve(__dirname,'./static'),
         filename: 'bundle.js'
     },
+
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js', '.jsx','.es6','css','scss','png','jpg']
     },
     module:{
         loaders:[
@@ -33,6 +35,11 @@ var config = {
             compress: {
                 warnings: false
             }
+        }),
+        new BrowserSyncPlugin({
+            host: 'localhost',
+            port: 8080,
+            server: {baseDir:'./'}
         })
     ]
 };
